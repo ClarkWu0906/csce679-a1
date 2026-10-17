@@ -1,0 +1,59 @@
+body {
+  margin: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+h1 { font-size: 22px; margin: 0 0 12px; }
+h2 { font-size: 17px; margin: 32px 0 8px; }
+
+.hint { color: #666; font-size: 13px; margin: 8px 0 0; }
+
+/* ---------- Max / min toggle ---------- */
+.mode-toggle { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+
+.mode-button {
+  padding: 5px 12px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: #f6f6f6;
+  cursor: pointer;
+}
+
+.mode-button.active {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+/* ---------- Charts ---------- */
+.chart { overflow-x: auto; }
+
+.axis text { font-size: 11px; }
+
+.cell { cursor: pointer; }
+.cell.hovered rect { stroke: #222; stroke-width: 2; }
+
+.mini-line {
+  fill: none;
+  stroke-width: 1.8;
+  pointer-events: none;
+}
+
+.legend-label { font-size: 12px; font-family: "Times New Roman", serif; }
+
+/* ---------- Tooltip ---------- */
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  padding: 6px 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.tooltip.visible { opacity: 1; }
